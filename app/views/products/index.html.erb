@@ -1,10 +1,9 @@
 <h1>Products</h1>
 
 
-<ul>
-    <% @products.each do |student| %>
+<p>The total number of products are <%= @products.count%></p>
 
-        <li><%= student.title %></li>
+<p>The average is <%= @products.average(:price) %></p>
 
-    <% end %>
-</ul>
+<p>The total sum of stock quantity is <%= @products.sum(:stock_quantity) %></p>
+
